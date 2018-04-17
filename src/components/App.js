@@ -1,16 +1,27 @@
-import React, { Component } from "react";
+import React from "react";
 import Wallet from "./wallet/Wallet";
+import Converter from "./converter/Converter";
 
-class App extends Component {
-  render() {
-    return (
+const App = () => {
+  return (
+    <div>
+      <h2>My Wallet</h2>
+      <hr />
+      <Wallet />
+      <hr />
+      <Converter />
       <div>
-        <h2>My Wallet</h2>
-        <hr />
-        <Wallet />
+        Powered by{" "}
+        <a
+          href="https://www.coindesk.com/price"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          coindesk
+        </a>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default App;
